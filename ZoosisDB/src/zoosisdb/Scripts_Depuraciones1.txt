@@ -1,0 +1,350 @@
+CREATE TABLE dbo.Cartera
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.Cartera ADD CONSTRAINT
+	PK_Cartera PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+
+CREATE TABLE dbo.CarteraAnt
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.CarteraAnt ADD CONSTRAINT
+	PK_CarteraAnt PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+CREATE TABLE dbo.CarteraExcel
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.CarteraExcel ADD CONSTRAINT
+	PK_CarteraExcel PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+INSERT INTO CarteraExcel VALUES ('A52','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A53','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A54','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A55','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A56','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A57','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A58','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A59','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A51','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A50','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+INSERT INTO CarteraExcel VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+
+INSERT INTO CarteraAnt VALUES ('A72','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A73','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A74','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A75','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A76','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A77','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A78','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A79','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+
+TRUNCATE TABLE Cartera
+		INSERT Cartera
+			SELECT * FROM CarteraExcel
+			WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER'
+		----------------------------------------------------------------------------------------- 
+		
+		DECLARE @EXISTE NVARCHAR(50)
+
+		WHILE EXISTS (SELECT * FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		--DECLARE @EXISTE NVARCHAR(50)
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraExcel WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update Cartera set Costumer = 'eXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update Cartera set Costumer = 'CREADO' WHERE  USERNAME = @EXISTE
+				
+
+			DELETE FROM  CartERAeXCEL 
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+		------------------------------------------------------------------------------------------------------------
+		--DECLARE @EXISTE NVARCHAR(50)
+		WHILE EXISTS (SELECT * FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update  Cartera set Costumer = 'EXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update CarteraAnt SET Costumer = 'ELIMINADO' WHERE  USERNAME = @EXISTE
+				INSERT Cartera SELECT  TOP 1 * FROM CarteraAnt WHERE USERNAME =@EXISTE
+
+			DELETE FROM  CarteraAnt
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+	
+	SELECT * FRO
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE dbo.Cartera
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.Cartera ADD CONSTRAINT
+	PK_Cartera PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+
+CREATE TABLE dbo.CarteraAnt
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.CarteraAnt ADD CONSTRAINT
+	PK_CarteraAnt PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+CREATE TABLE dbo.CarteraExcel
+	(
+	USERNAME nvarchar(50) NOT NULL,
+	USER_ID nvarchar(50) NULL,
+	PASSWORD nvarchar(50) NULL,
+	ACCOUNT_STATUS		nVARCHAR(50),
+		LOCK_DATE			nVARCHAR(50),
+		EXPIRY_DATE			nVARCHAR(50),
+		DEFAULT_TABLESPACE	nVARCHAR(50),
+		TEMPORARY_TABLESPACE	nVARCHAR(50),
+		CREATED				nVARCHAR(50),
+		PROFILE				nVARCHAR(50),
+		INTIAL_RSRC_CONSUMER_GROUP	nVARCHAR(50),
+		EXTERNAL_NAME		nVARCHAR(50),
+		COSTUMER 			nVARCHAR(50)
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.CarteraExcel ADD CONSTRAINT
+	PK_CarteraExcel PRIMARY KEY CLUSTERED 
+	(
+	USERNAME
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+
+
+Declare @execution_id bigint
+EXEC [SSISDB].[catalog].[create_execution] @package_name=N'DTS_Depuraciones1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'DTS', @project_name=N'DTS_Depuraciones', @use32bitruntime=False, @reference_id=Null
+Select @execution_id
+DECLARE @var0 smallint = 1
+EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id,  @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var0
+EXEC [SSISDB].[catalog].[start_execution] @execution_id
+GO
+
+
+truncate table CarteraExcel
+select * from  CarteraExcel
+
+INSERT INTO CarteraExcel VALUES ('A52','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A53','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A54','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A55','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A56','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A57','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A58','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A59','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A51','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A50','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+INSERT INTO CarteraExcel VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+
+INSERT INTO Aplica VALUES ('A72','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A73','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A74','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A75','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A76','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A77','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A78','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO Aplica VALUES ('A79','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+
+
+
+INSERT Cartera
+			SELECT * FROM CarteraExcel
+			WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER'
+		----------------------------------------------------------------------------------------- 
+		
+		DECLARE @EXISTE NVARCHAR(50)
+
+		WHILE EXISTS (SELECT * FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		--DECLARE @EXISTE NVARCHAR(50)
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraExcel WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update Cartera set Costumer = 'eXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update Cartera set Costumer = 'CREADO' WHERE  USERNAME = @EXISTE
+				
+
+			DELETE FROM  CartERAeXCEL 
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+		------------------------------------------------------------------------------------------------------------
+		--DECLARE @EXISTE NVARCHAR(50)
+		WHILE EXISTS (SELECT * FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update  Cartera set Costumer = 'EXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update CarteraAnt SET Costumer = 'ELIMINADO' WHERE  USERNAME = @EXISTE
+				INSERT Cartera SELECT  TOP 1 * FROM CarteraAnt WHERE USERNAME =@EXISTE
+
+			DELETE FROM  CarteraAnt
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+
+select * from cartera
+select * from carteraAnt
+select * from carteraExcel
+
+truncate table cartera
+truncate table carteraAnt
+truncate table carteraExcel
+---------------------------------------------------------------------------------------------------------------------------------	
+	
+truncate table CarteraAnt
+
+Execute sp_Depu_Cartera_DTS
+Execute sp_Depu_Cartera_DTS
+
+INSERT INTO CarteraExcel VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraExcel VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A61','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A60','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+
+INSERT INTO CarteraAnt VALUES ('A72','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A73','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A74','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A75','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A76','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A77','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A78','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+INSERT INTO CarteraAnt VALUES ('A79','23423','jhsdlkajf','OPEN','USER',	'as',	'USER',	'as',	'as',	'as',	'as',	'as',	'')
+
+Execute sp_Depu_Cartera
+
+SELECT * FROM CarteraExcel
+SELECT * FROM CarteraAnt
+SELECT * FROM CARTERA
+---------------------------------------------------------------------------------------------------------------------------------------------
+	
