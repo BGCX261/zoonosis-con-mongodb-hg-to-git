@@ -347,4 +347,72 @@ SELECT * FROM CarteraExcel
 SELECT * FROM CarteraAnt
 SELECT * FROM CARTERA
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+USE [Depuraciones]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_Depu_Cartera]    Script Date: 14/05/2014 15:43:14 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[sp_Depu_Cartera]
+ AS
+TRUNCATE TABLE CARTERA	
+INSERT Cartera
+			SELECT * FROM CarteraExcel
+			WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER'
+		----------------------------------------------------------------------------------------- 
+		
+		DECLARE @EXISTE NVARCHAR(50)
+
+		WHILE EXISTS (SELECT * FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		--DECLARE @EXISTE NVARCHAR(50)
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraExcel WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update Cartera set Costumer = 'eXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update Cartera set Costumer = 'CREADO' WHERE  USERNAME = @EXISTE
+				
+
+			DELETE FROM  CartERAeXCEL 
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CartERAeXCEL WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+		------------------------------------------------------------------------------------------------------------
+		--DECLARE @EXISTE NVARCHAR(50)
+		WHILE EXISTS (SELECT * FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER')
+		
+		BEGIN
+		SET @EXISTE = (SELECT  TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC)
+		 
+			
+			if exists (SELECT * FROM Cartera inner  JOIN CarteraAnt ON 	CarteraAnt.USERNAME = Cartera.USERNAME  WHERE CarteraAnt.USERNAME =@EXISTE)
+			
+				update  Cartera set Costumer = 'EXISTE' WHERE  USERNAME = @EXISTE
+			
+			ELSE 
+				update CarteraAnt SET Costumer = 'ELIMINADO' WHERE  USERNAME = @EXISTE
+				IF NOT EXISTS (SELECT  TOP 1 * FROM Cartera WHERE USERNAME =@EXISTE)
+					INSERT Cartera SELECT  TOP 1 * FROM CarteraAnt WHERE USERNAME =@EXISTE
+				
+			DELETE FROM  CarteraAnt
+			WHERE USERNAME =(SELECT TOP 1 USERNAME FROM CarteraAnt WHERE ACCOUNT_STATUS = 'OPEN'AND DEFAULT_TABLESPACE = 'USER' ORDER BY  USERNAME DESC )
+		END
+	
+	---------------------ejecuta dts que va al excel--------------------
+	
+
+	Declare @execution_id bigint
+	EXEC [SSISDB].[catalog].[create_execution] @package_name=N'DTS_Depuraciones2.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'DTS', @project_name=N'Exportar Datos', @use32bitruntime=False, @reference_id=Null
+	Select @execution_id
+	DECLARE @var0 smallint = 1
+	EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id,  @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var0
+	EXEC [SSISDB].[catalog].[start_execution] @execution_id
+
+	TRUNCATE TABLE CarteraAnt
+	insert CarteraAnt select * from Cartera
 	
